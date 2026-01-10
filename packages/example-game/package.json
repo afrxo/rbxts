@@ -5,7 +5,9 @@
   "scripts": {
     "build": "shx rm -rf out && rbxtsc --verbose",
     "watch": "rbxtsc -w",
-    "serve": "rojo serve"
+    "serve": "rojo serve",
+    "predev": "pnpm build",
+    "dev": "concurrently -n rojo,rbxtsc -c blue,yellow 'pnpm serve' 'pnpm watch'"
   },
   "devDependencies": {
     "@rbxts/compiler-types": "3.0.0-types.0",

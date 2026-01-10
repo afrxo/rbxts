@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "rimraf": "^6.0.1",
+    "concurrently": "^9.1.2",
     "@rbxts/compiler-types": "3.0.0-types.0",
     "@rbxts/types": "^1.0.896",
     "roblox-ts": "^3.0.0",

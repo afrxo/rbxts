@@ -55,7 +55,9 @@ const gamePackageJson = {
   scripts: {
     serve: "rojo serve",
     build: "shx rm -rf out && rbxtsc --verbose",
-    watch: "rbxtsc -w",
+    watch: "rbxtsc -w --verbose",
+    predev: "pnpm build",
+    dev: "concurrently -n rojo,rbxtsc -c blue,yellow 'pnpm serve' 'pnpm watch'"
   },
   devDependencies: {
     "@rbxts/compiler-types": "3.0.0-types.0",
@@ -71,6 +73,8 @@ const gameTsConfig = {
   extends: "../../tsconfig.base.json",
   compilerOptions: {
     baseUrl: "src",
+    rootDir: "src",
+		outDir: "out",
     typeRoots: ["node_modules/@rbxts", "node_modules/@repo"],
   },
 };
@@ -95,10 +99,7 @@ const gameProjectJson = {
           $className: "Folder",
           "@rbxts": {
             $path: "node_modules/@rbxts",
-          },
-          "@repo": {
-            $path: "node_modules/@repo",
-          },
+          }
         },
         $path: "include",
       },
@@ -249,7 +250,7 @@ Created game "${shortName}" with structure:
 Next steps:
   1. Run "pnpm install" to install dependencies
   2. Run "pnpm --filter ${shortName} build" to build
-  3. Run "pnpm --filter ${shortName} watch" for development
+  3. Run "pnpm --filter ${shortName} dev" for development
 `);
 } else {
   // Create library structure
