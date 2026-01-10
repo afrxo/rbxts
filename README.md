@@ -46,6 +46,7 @@ Reusable roblox-ts libraries that can be imported by games or other packages. Pa
 
 - [Node.js](https://nodejs.org/)
 - [PNPM](https://pnpm.io/) package manager
+- [Rojo](https://rojo.space) 
 
 ```bash
 npm install -g pnpm
