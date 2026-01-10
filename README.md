@@ -56,8 +56,8 @@ npm install -g pnpm
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd roblox-ts-mono
+   git clone https://github.com/afrxo/rbxts/
+   cd rbxts
    ```
 
 2. Run the setup command:
