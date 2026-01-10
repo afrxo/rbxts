@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		// Required for roblox-ts
+		"allowSyntheticDefaultImports": true,
+		"downlevelIteration": true,
+		"jsx": "react",
+		"jsxFactory": "React.createElement",
+		"jsxFragmentFactory": "React.Fragment",
+		"module": "commonjs",
+		"moduleResolution": "Node",
+		"noLib": true,
+		"resolveJsonModule": true,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleDetection": "force",
+		"strict": true,
+		"target": "ESNext",
+		"incremental": true,
+
+		// Type resolution (packages extend this with additional typeRoots)
+		"typeRoots": ["node_modules/@rbxts"]
+	}
+}

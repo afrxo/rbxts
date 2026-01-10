@@ -1,0 +1,20 @@
+{
+  "name": "rbxts-monorepo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "packages:setup": "node scripts/sync-workspace-deps.js && pnpm install",
+    "build": "pnpm --filter \"./packages/**\" build",
+    "new": "node scripts/create-package.js",
+    "clean": "rimraf node_modules packages/*/node_modules",
+    "clean:setup": "pnpm run clean && pnpm run packages:setup"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "^1.0.896",
+    "roblox-ts": "^3.0.0",
+    "typescript": "^5.9.3"
+  }
+}

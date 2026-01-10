@@ -1,0 +1,32 @@
+{
+  "name": "@repo/react-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "out/init.lua",
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "types": "out/index.d.ts",
+  "files": [
+    "out",
+    "!**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@rbxts/react": "17.3.7-alpha.1",
+    "@rbxts/react-roblox": "17.3.7-alpha.1"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "^1.0.896",
+    "roblox-ts": "^3.0.0",
+    "typescript": "^5.9.3"
+  }
+}

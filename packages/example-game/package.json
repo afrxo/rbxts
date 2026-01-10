@@ -1,0 +1,25 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "shx rm -rf out && rbxtsc --verbose",
+    "watch": "rbxtsc -w",
+    "serve": "rojo serve"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "^1.0.896",
+    "roblox-ts": "^3.0.0",
+    "typescript": "^5.9.3",
+    "shx": "^0.4.0"
+  },
+  "dependencies": {
+    "@rbxts/maid": "^1.1.0",
+    "@rbxts/react": "17.3.7-alpha.1",
+    "@rbxts/react-roblox": "17.3.7-alpha.1",
+    "@rbxts/services": "*",
+    "@repo/package": "workspace:*",
+    "@repo/react-test": "workspace:*"
+  }
+}
