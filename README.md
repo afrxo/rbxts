@@ -86,6 +86,12 @@ pnpm --filter @repo/<library-name> build
 pnpm --filter <package-name> watch
 ```
 
+### Dev mode
+
+```bash
+pnpm --filter <package-name> dev
+```
+
 ### Clean node_modules
 
 ```bash
